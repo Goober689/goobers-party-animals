@@ -77,18 +77,15 @@ footer {
   margin-top: 30px;
 }
 
-.banner {
-  display: block;
-  width: 100%;    /* Full width on smaller screens */
-  max-width: 800px; /* Limits size on larger screens */
-  height: auto;     /* Maintains aspect ratio */
-  margin: 0 auto;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 250px; /* Limits header height */
+  overflow: hidden;
 }
 
-/* Media query for larger screens */
-@media (min-width: 768px) {
-  .banner {
-    max-width: 80%; /* Slightly smaller width for desktop */
-    max-height: 250px; /* Limits height on larger screens */
-  }
+.banner {
+  max-width: 90%;
+  height: auto;
 }
