@@ -79,7 +79,16 @@ footer {
 
 .banner {
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;    /* Full width on smaller screens */
+  max-width: 800px; /* Limits size on larger screens */
+  height: auto;     /* Maintains aspect ratio */
   margin: 0 auto;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .banner {
+    max-width: 80%; /* Slightly smaller width for desktop */
+    max-height: 250px; /* Limits height on larger screens */
+  }
 }
