@@ -33,5 +33,9 @@ document.getElementById("prev").addEventListener("click", () => {
 
 function toggleMenu() {
   const menu = document.getElementById("mobileMenu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
+  if (menu.style.display === "none" || menu.style.display === "") {
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
 }
