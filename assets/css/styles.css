@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,18 +12,28 @@ body {
   line-height: 1.6;
 }
 
-/* Basic Header and Logo styling */
+/* Container for Centered Content */
+.container {
+  max-width: 1200px; /* Limits width on larger screens */
+  margin: 0 auto;    /* Centers container */
+  padding: 0 20px;   /* Adds padding on the sides */
+}
+
+/* Header Styling */
 header {
+  background-color: #fff;
+  border-bottom: 2px solid #4CAF50;
+  padding: 10px 0;
+}
+
+header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #fff;
-  border-bottom: 2px solid #4CAF50;
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 200px; /* Adjust as needed for logo size */
 }
 
 .banner {
@@ -31,7 +41,7 @@ header {
   height: auto;
 }
 
-/* Desktop Navigation (shown only on larger screens) */
+/* Desktop Navigation (Visible on Larger Screens) */
 .desktop-nav {
   display: flex;
 }
@@ -53,7 +63,7 @@ header {
   color: #4CAF50;
 }
 
-/* Mobile Navigation Styling */
+/* Mobile Navigation (Hidden on Larger Screens) */
 .mobile-nav {
   display: none; /* Hidden on desktop */
   flex-direction: column;
@@ -90,44 +100,32 @@ header {
   color: #4CAF50;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none; /* Hide desktop nav on mobile */
-  }
-
-  .mobile-nav {
-    display: flex; /* Show mobile nav */
-  }
-}
-
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Main Content */
+/* Main Content Styling */
 main {
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
+  background-color: #f9f9f9;
+  padding: 20px 0;
 }
 
 h2, h3 {
   color: #4CAF50;
   margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* Buttons */
@@ -144,11 +142,21 @@ button:hover, .hover-effect:hover {
   background-color: #45a049;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: #fff;
-  margin-top: 30px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Hide Desktop Navigation on Mobile */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Show Mobile Navigation */
+  .mobile-nav {
+    display: flex;
+  }
+
+  /* Center Content for Mobile */
+  .container {
+    max-width: 100%; /* Full width on mobile */
+    padding: 0 10px; /* Smaller padding */
+  }
 }

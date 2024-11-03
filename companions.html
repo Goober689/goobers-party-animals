@@ -9,7 +9,8 @@
 <body>
 
   <!-- Header Section -->
-  <header>
+<header>
+  <div class="container"> <!-- Open container for both desktop and mobile -->
     <div class="logo">
       <img src="assets/images/banner.png" alt="Goobers Party Animals Logo" class="banner">
     </div>
@@ -25,6 +26,7 @@
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
+    <!-- Mobile Navigation -->
     <nav class="mobile-nav">
       <button class="hamburger" onclick="toggleMenu()">☰</button>
       <ul id="mobileMenu" class="mobile-menu">
@@ -38,10 +40,12 @@
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
     </nav>
-  </header>
+  </div> <!-- Close container here -->
+</header>
 
   <!-- Main Content Section -->
   <main>
+    <div class="container">
     <section id="intro">
       <h2>Welcome to Goobers Party Animals</h2>
       <p>Your one-stop reptile zoo-to-you experience for parties and events!</p>
@@ -55,6 +59,7 @@
 	</section>
 
     <!-- Additional content specific to each page goes here -->
+	</div>
   </main>
 
   <!-- Footer Section -->
