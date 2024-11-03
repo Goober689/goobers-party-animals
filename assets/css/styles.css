@@ -25,10 +25,33 @@ header h1 {
   margin-bottom: 10px;
 }
 
+/* Style the Banner */
+.banner {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Center the Navigation Below the Banner */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #4CAF50;
+  padding: 10px 0;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
 
@@ -75,17 +98,4 @@ footer {
   background-color: #333;
   color: #fff;
   margin-top: 30px;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 250px; /* Limits header height */
-  overflow: hidden;
-}
-
-.banner {
-  max-width: 90%;
-  height: auto;
 }
