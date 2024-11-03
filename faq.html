@@ -10,9 +10,24 @@
 
   <!-- Header Section -->
   <header>
-    <img src="assets/images/banner.png" alt="Goobers Party Animals Banner" class="banner">
-    <nav>
+    <div class="logo">
+      <img src="assets/images/banner.png" alt="Goobers Party Animals Logo" class="banner">
+    </div>
+    <nav class="desktop-nav">
       <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="companions.html">Companions</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+    <nav class="mobile-nav">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <ul id="mobileMenu" class="mobile-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="shop.html">Shop</a></li>

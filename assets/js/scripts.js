@@ -30,3 +30,8 @@ document.getElementById("prev").addEventListener("click", () => {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   document.getElementById("carousel-image").src = images[currentIndex];
 });
+
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
