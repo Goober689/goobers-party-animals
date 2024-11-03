@@ -78,12 +78,13 @@ header .container {
   outline: none;
 }
 
+/* Dropdown Mobile Menu Styling */
 .mobile-menu {
   display: none; /* Initially hidden */
   list-style: none;
-  flex-direction: column;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 .mobile-menu li {
@@ -98,6 +99,28 @@ header .container {
 
 .mobile-menu a:hover {
   color: #4CAF50;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Hide Desktop Navigation on Mobile */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Show Mobile Navigation */
+  .mobile-nav {
+    display: flex; /* Show hamburger menu on mobile */
+  }
+
+  /* Center the Logo on Mobile */
+  .container {
+    flex-direction: column;
+  }
+
+  .logo {
+    order: -1; /* Move the logo above the hamburger icon on mobile */
+  }
 }
 
 /* Main Content Styling */
