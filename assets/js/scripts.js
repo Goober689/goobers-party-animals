@@ -33,17 +33,16 @@ document.getElementById("prev").addEventListener("click", () => {
 
 function toggleMenu() {
   const menu = document.getElementById("menu");
-  const isExpanded = menu.style.display === "block";
+  const isExpanded = menu.style.maxHeight && menu.style.maxHeight !== "0px";
 
-  // Toggle the display of the menu
+  // Toggle menu visibility
   if (isExpanded) {
-    menu.style.display = "none";
     menu.style.maxHeight = "0"; // Collapse menu
   } else {
-    menu.style.display = "block";
-    menu.style.maxHeight = menu.scrollHeight + "px"; // Smooth expand
+    menu.style.maxHeight = menu.scrollHeight + "px"; // Expand menu smoothly
   }
 }
+
 
 
 

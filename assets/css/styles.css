@@ -62,12 +62,12 @@ header .container {
 
 
 
-/* Mobile Navigation Styling */
+/* Mobile Navigation Styles */
 .navigation {
-  background-color: #333; /* Dark background for the menu */
-  color: #fff;
+  background-color: #333; /* Dark background */
   padding: 10px;
   position: relative;
+  color: #fff;
 }
 
 .menu-button {
@@ -76,61 +76,58 @@ header .container {
   color: #fff;
   border: none;
   padding: 15px 20px;
-  cursor: pointer;
-  display: block;
-  width: 100%;
   text-align: center;
-  font-weight: bold;
+  width: 100%; /* Full width for mobile */
+  cursor: pointer;
 }
 
 .menu-button:hover {
-  background-color: #45a049; /* Slightly darker green */
+  background-color: #45a049; /* Slightly darker green on hover */
 }
 
-/* Dropdown Mobile Menu Styling */
+/* Menu */
 .menu {
-  display: none; /* Initially hidden */
+  overflow: hidden; /* Required for smooth animation */
   list-style: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease; /* Smooth growth animation */
-  max-height: 0; /* Hidden state */
+  max-height: 0; /* Initially collapsed */
+  transition: max-height 0.5s ease; /* Smooth expand/contract animation */
+  background-color: #f9f9f9; /* Light background */
 }
 
 .menu-item {
-  border-bottom: 1px solid #555; /* Separator for items */
+  border-bottom: 1px solid #ccc;
 }
 
 .menu-item a {
-  display: block;
-  color: #fff; /* Text color */
   text-decoration: none;
-  padding: 10px 15px;
-  font-size: 16px;
+  color: #333;
+  padding: 10px;
+  display: block;
 }
 
 .menu-item a:hover {
-  background-color: #4CAF50; /* Highlight background */
+  background-color: #4CAF50;
   color: #fff;
 }
 
-/* Static Phone Section */
+/* Static Phone Number */
 .static-phone {
-  text-align: center;
   margin-top: 10px;
-  color: #4CAF50; /* Goobers green */
+  text-align: center;
+  color: #4CAF50;
 }
 
 .static-phone a {
-  font-size: 18px;
-  color: #4CAF50;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .static-phone a:hover {
   text-decoration: underline;
 }
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
