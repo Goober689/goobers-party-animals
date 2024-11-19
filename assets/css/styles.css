@@ -473,8 +473,8 @@ header .container {
 
 .card-front img {
   max-width: 100%; /* Keeps image responsive */
-  border-radius: 5px; /* Smooth corners for images */
-  margin-bottom: 15px; /* Spacing below the image */
+  border-radius: 1px; /* Smooth corners for images */
+  margin-bottom: 0px; /* Spacing below the image */
 }
 
 .card-front h3, .card-back h3 {
@@ -486,10 +486,10 @@ header .container {
   transform: rotateY(180deg); /* Flips the back side */
 }
 
-.card-back p {
-  font-size: 14px; /* Smaller, readable text */
-  color: #555; /* Neutral text color */
-  line-height: 1.5; /* Improves readability */
+.card-back img {
+  max-width: 100%; /* Keeps image responsive */
+  border-radius: 1px; /* Smooth corners for images */
+  margin-bottom: 0px; /* Spacing below the image */
 }
 
 /* Responsive Styling for Smaller Screens */
