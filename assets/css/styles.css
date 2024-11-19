@@ -7,8 +7,8 @@
 }
 
 body {
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #228B22; /* Forest green background */
+  color: #fff; /* White text */
   line-height: 1.6;
 }
 
@@ -17,12 +17,13 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  background-color: transparent; /* Matches the body background */
 }
 
 /* Header Styling */
 header {
-  background-color: #fff;
-  border-bottom: 2px solid #4CAF50;
+  background-color: #fff; /* White header for contrast */
+  border-bottom: 2px solid #4CAF50; /* Green accent */
   padding: 10px 0;
 }
 
@@ -34,24 +35,42 @@ header .container {
 
 .logo img {
   max-width: 80%; /* Logo takes 80% of mobile screen */
-  max-width: 400px; /* Optional limit */
+  max-width: 400px; /* Optional limit for desktop screens */
 }
 
 /* Desktop Navigation */
 .desktop-nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 20px; /* Space between menu items */
+  margin: 0;
 }
 
 .desktop-nav a {
   text-decoration: none;
-  color: #333;
+  color: #333; /* Neutral text color for contrast */
   font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .desktop-nav a:hover {
-  color: #4CAF50;
+  color: #4CAF50; /* Goobers green theme on hover */
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column; /* Stack logo and menu vertically */
+    align-items: center; /* Center align content */
+  }
+
+  .logo img {
+    max-width: 90%; /* Allow logo to expand slightly on smaller screens */
+  }
+
+  .desktop-nav {
+    display: none; /* Hide desktop navigation on mobile */
+  }
 }
 
 
@@ -79,6 +98,7 @@ header .container {
   text-align: center;
   width: 100%; /* Full width for mobile */
   cursor: pointer;
+  border-radius: 5px; /* Rounded corners for a polished look */
 }
 
 .menu-button:hover {
@@ -94,10 +114,15 @@ header .container {
   max-height: 0; /* Initially collapsed */
   transition: max-height 0.5s ease; /* Smooth expand/contract animation */
   background-color: #f9f9f9; /* Light background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .menu-item {
   border-bottom: 1px solid #ccc;
+}
+
+.menu-item:last-child {
+  border-bottom: none; /* Remove border for the last item */
 }
 
 .menu-item a {
@@ -105,11 +130,13 @@ header .container {
   color: #333;
   padding: 10px;
   display: block;
+  font-size: 16px;
 }
 
 .menu-item a:hover {
   background-color: #4CAF50;
   color: #fff;
+  border-radius: 5px; /* Rounded hover effect */
 }
 
 /* Static Phone Number */
@@ -117,6 +144,7 @@ header .container {
   margin-top: 10px;
   text-align: center;
   color: #4CAF50;
+  font-weight: bold;
 }
 
 .static-phone a {
@@ -128,7 +156,6 @@ header .container {
   text-decoration: underline;
 }
 
-
 /* Responsive Styles */
 @media (max-width: 768px) {
   .desktop-nav {
@@ -138,6 +165,7 @@ header .container {
   .menu {
     display: flex; /* Show menu on mobile */
     flex-direction: column;
+    width: 100%;
   }
 
   .menu-item {
@@ -146,6 +174,11 @@ header .container {
 
   .menu-button {
     width: 100%; /* Full-width button */
+  }
+
+  .static-phone {
+    margin-top: 20px;
+    font-size: 18px; /* Slightly larger font for better visibility */
   }
 }
 
@@ -249,7 +282,6 @@ header .container {
 
 
 
-
 /* Packages Section */
 .packages-section {
   background-color: #f9f9f9;
@@ -258,7 +290,7 @@ header .container {
 }
 
 .packages-section h2 {
-  color: #4CAF50;
+  color: #4CAF50; /* Goobers green */
   margin-bottom: 20px;
 }
 
@@ -269,95 +301,95 @@ header .container {
 
 /* Packages Container */
 .packages-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Spacing between cards */
 }
 
 /* Package Card */
 .package-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  width: 300px;
-  text-align: left;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  perspective: 1000px; /* Enables 3D flip effect */
+}
+
+.card-inner {
   position: relative;
+  width: 100%;
+  padding-top: 100%; /* Ensures square cards */
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease; /* Smooth flip animation */
 }
 
-.package-card h3 {
-  color: #4CAF50;
+.package-card:hover .card-inner {
+  transform: rotateY(180deg); /* Flips card on hover */
+}
+
+/* Card Front and Back */
+.card-front, .card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden; /* Hides back side */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid #ddd; /* Light border */
+}
+
+.card-front {
+  text-align: center;
+}
+
+.card-front h3 {
+  color: #4CAF50; /* Goobers green */
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
-.package-card .price {
+.card-front .price {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
-  margin: 15px 0;
+  color: #333; /* Neutral dark font color */
 }
 
-.package-card .book-now {
+.card-front .popular {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Flip back face */
+  text-align: center;
+}
+
+.card-back p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.card-back .book-now {
   background-color: #4CAF50;
   color: #fff;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 }
 
-.package-card .book-now:hover {
-  background-color: #45a049;
-}
-
-/* Highlight Popular Package */
-.package-card.popular {
-  border: 2px solid #4CAF50;
-}
-
-.package-card .badge {
-  background-color: #4CAF50;
-  color: #fff;
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  padding: 5px 10px;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-/* Additional Info */
-.additional-info {
-  margin-top: 30px;
-  text-align: left;
-}
-
-.additional-info h3 {
-  color: #4CAF50;
-}
-
-.additional-info ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 20px;
-}
-
-.additional-info .note {
-  font-size: 14px;
-  color: #888;
-  margin-bottom: 10px;
-}
-
-.additional-info a {
-  color: #4CAF50;
-  text-decoration: none;
-}
-
-.additional-info a:hover {
-  text-decoration: underline;
+.card-back .book-now:hover {
+  background-color: #45a049; /* Slightly darker green */
 }
 
 
@@ -426,12 +458,14 @@ header .container {
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
+  border: 6px solid #4CAF50; /* Semi-thick border (3% of the card) in Goobers green */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds slight shadow for depth */
+  overflow: hidden; /* Ensures content stays within the card boundaries */
 }
 
 .card-front img {
   max-width: 100%; /* Keeps image responsive */
-  border-radius: 10px; /* Smooth corners for images */
+  border-radius: 5px; /* Smooth corners for images */
   margin-bottom: 15px; /* Spacing below the image */
 }
 
@@ -450,10 +484,15 @@ header .container {
   line-height: 1.5; /* Improves readability */
 }
 
+/* Responsive Styling for Smaller Screens */
 @media (max-width: 768px) {
   .companion-card {
     width: 200px;
     height: 280px;
+  }
+  .card-front, .card-back {
+    padding: 15px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Slightly smaller text size */
   }
 }
 
@@ -464,82 +503,87 @@ header .container {
 
 
 
+
 /* FAQ Section Styling */
 .faq-section {
-  padding: 50px 20px;
-  background-color: #fff;
-  color: #333;
+  padding: 50px 20px;               /* Adds spacing */
+  background-color: #228B22;       /* Forest green background */
+  color: #fff;                     /* White text */
 }
 
 .faq-section h2 {
-  color: #4CAF50;
-  text-align: center;
+  color: #FFD700;                  /* Gold color for headings */
+  text-align: center;              /* Center align heading */
   margin-bottom: 30px;
 }
 
 .faq-item {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;             /* Spacing between FAQ items */
+  border-bottom: 1px solid #555;   /* Subtle border for separation */
   padding-bottom: 15px;
 }
 
 .faq-item h3 {
-  color: #4CAF50;
+  color: #FFD700;                  /* Gold color for questions */
   font-size: 18px;
   margin-bottom: 10px;
 }
 
 .faq-item p {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.6;                /* Improves readability */
+  color: #fff;                     /* White text for answers */
 }
 
 .faq-item a {
-  color: #4CAF50;
+  color: #FFD700;                  /* Gold color for links */
   text-decoration: none;
 }
 
 .faq-item a:hover {
-  text-decoration: underline;
+  text-decoration: underline;      /* Underline links on hover */
 }
+
 
 
 
 
 /* About Section */
 .about-section {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+  padding: 50px 20px;               /* Adds spacing */
+  background-color: #228B22;        /* Forest green background */
+  color: #fff;                      /* White text */
+  line-height: 1.6;                 /* Improves readability */
 }
 
 .about-section h2, .about-section h3 {
-  color: #4CAF50;
+  color: #FFD700;                   /* Gold color for headings */
   margin-bottom: 20px;
 }
 
 .about-section p {
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 20px;              /* Spacing between paragraphs */
+  font-size: 16px;                  /* Font size for readability */
 }
 
 .about-section ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-bottom: 20px;
+  list-style-type: disc;            /* Bullet points */
+  padding-left: 20px;               /* Indentation for list items */
+  margin-bottom: 20px;              /* Spacing below the list */
 }
 
 .about-section ul li {
-  margin-bottom: 10px;
+  margin-bottom: 10px;              /* Spacing between list items */
+  color: #fff;                      /* White text for list items */
 }
 
 .about-section strong {
-  color: #4CAF50;
+  color: #FFD700;                   /* Gold for emphasis */
 }
 
+/* Container for Central Alignment */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1200px;                /* Sets max width */
+  margin: 0 auto;                   /* Centers container */
+  padding: 0 20px;                  /* Adds side padding */
 }
