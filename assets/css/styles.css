@@ -62,57 +62,74 @@ header .container {
 
 
 
-
 /* Mobile Navigation Styling */
-.mobile-nav {
-  display: none; /* Hidden on desktop */
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+.navigation {
+  background-color: #333; /* Dark background for the menu */
+  color: #fff;
+  padding: 10px;
+  position: relative;
 }
 
-.hamburger {
+.menu-button {
   font-size: 18px;
-  background-color: #4CAF50; /* Green theme */
+  background-color: #4CAF50; /* Goobers green */
   color: #fff;
   border: none;
+  padding: 15px 20px;
   cursor: pointer;
-  outline: none;
-  padding: 15px;
-  width: 100%; /* Full width */
+  display: block;
+  width: 100%;
   text-align: center;
   font-weight: bold;
 }
 
-.hamburger:hover {
-  background-color: #45a049; /* Slightly darker green on hover */
+.menu-button:hover {
+  background-color: #45a049; /* Slightly darker green */
 }
 
 /* Dropdown Mobile Menu Styling */
-.mobile-menu {
+.menu {
   display: none; /* Initially hidden */
   list-style: none;
-  padding: 0;
   margin: 0;
-  text-align: center;
-  width: 100%; /* Full width of screen */
-  background-color: #f9f9f9; /* Light background for dropdown */
+  padding: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Smooth growth animation */
+  max-height: 0; /* Hidden state */
 }
 
-.mobile-menu li {
-  margin: 10px 0;
+.menu-item {
+  border-bottom: 1px solid #555; /* Separator for items */
 }
 
-.mobile-menu a {
-  color: #333; /* Neutral text color */
-  text-decoration: none;
-  font-weight: bold;
+.menu-item a {
   display: block;
-  padding: 10px 20px;
+  color: #fff; /* Text color */
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
 }
 
-.mobile-menu a:hover {
-  background-color: #ddd; /* Highlight background on hover */
+.menu-item a:hover {
+  background-color: #4CAF50; /* Highlight background */
+  color: #fff;
+}
+
+/* Static Phone Section */
+.static-phone {
+  text-align: center;
+  margin-top: 10px;
+  color: #4CAF50; /* Goobers green */
+}
+
+.static-phone a {
+  font-size: 18px;
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.static-phone a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive Styles */
@@ -121,10 +138,20 @@ header .container {
     display: none; /* Hide desktop menu on mobile */
   }
 
-  .mobile-nav {
-    display: flex;
+  .menu {
+    display: flex; /* Show menu on mobile */
+    flex-direction: column;
+  }
+
+  .menu-item {
+    text-align: center;
+  }
+
+  .menu-button {
+    width: 100%; /* Full-width button */
   }
 }
+
 
 
 

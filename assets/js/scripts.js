@@ -32,13 +32,19 @@ document.getElementById("prev").addEventListener("click", () => {
 });
 
 function toggleMenu() {
-  const menu = document.getElementById("mobileMenu");
-  if (menu.style.display === "none" || menu.style.display === "") {
-    menu.style.display = "block"; // Show the menu
+  const menu = document.getElementById("menu");
+  const isExpanded = menu.style.display === "block";
+
+  // Toggle the display of the menu
+  if (isExpanded) {
+    menu.style.display = "none";
+    menu.style.maxHeight = "0"; // Collapse menu
   } else {
-    menu.style.display = "none"; // Hide the menu
+    menu.style.display = "block";
+    menu.style.maxHeight = menu.scrollHeight + "px"; // Smooth expand
   }
 }
+
 
 
 
