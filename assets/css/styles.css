@@ -368,6 +368,8 @@ header .container {
 
 
 
+
+
 /* Companions Section */
 .companions-section {
   padding: 50px 20px;
@@ -376,7 +378,7 @@ header .container {
 }
 
 .companions-section h2 {
-  color: #4CAF50;
+  color: #4CAF50; /* Goobers green */
   margin-bottom: 20px;
 }
 
@@ -388,25 +390,25 @@ header .container {
 /* Companions Grid */
 .companions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusts layout responsively */
+  gap: 20px; /* Adds spacing between cards */
 }
 
 /* Companion Card */
 .companion-card {
-  perspective: 1000px;
+  perspective: 1000px; /* Enables 3D flip effect */
 }
 
 .card-inner {
   position: relative;
   width: 100%;
   padding-top: 100%; /* Ensures cards are square */
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Maintains 3D context */
+  transition: transform 0.6s; /* Smooth flip animation */
 }
 
 .companion-card:hover .card-inner {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /* Flips card on hover */
 }
 
 /* Card Front and Back */
@@ -416,7 +418,7 @@ header .container {
   left: 0;
   right: 0;
   bottom: 0;
-  backface-visibility: hidden;
+  backface-visibility: hidden; /* Hides back face when not flipped */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -424,29 +426,40 @@ header .container {
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds slight shadow for depth */
 }
 
 .card-front img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  max-width: 100%; /* Keeps image responsive */
+  border-radius: 10px; /* Smooth corners for images */
+  margin-bottom: 15px; /* Spacing below the image */
 }
 
 .card-front h3, .card-back h3 {
   margin: 10px 0;
-  color: #4CAF50;
+  color: #4CAF50; /* Goobers green */
 }
 
 .card-back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /* Flips the back side */
 }
 
 .card-back p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.5;
+  font-size: 14px; /* Smaller, readable text */
+  color: #555; /* Neutral text color */
+  line-height: 1.5; /* Improves readability */
 }
+
+@media (max-width: 768px) {
+  .companion-card {
+    width: 200px;
+    height: 280px;
+  }
+}
+
+
+
+
 
 
 
