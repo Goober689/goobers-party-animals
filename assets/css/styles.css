@@ -54,30 +54,40 @@ header .container {
   color: #4CAF50;
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation Styling */
 .mobile-nav {
-  display: none;
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .hamburger {
   font-size: 18px;
-  background-color: #4CAF50;
+  background-color: #4CAF50; /* Green theme */
   color: #fff;
-  padding: 15px;
   border: none;
-  width: 80%;
+  cursor: pointer;
+  outline: none;
+  padding: 15px;
+  width: 100%; /* Full width */
+  text-align: center;
+  font-weight: bold;
 }
 
 .hamburger:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* Slightly darker green on hover */
 }
 
-/* Mobile Dropdown */
+/* Dropdown Mobile Menu Styling */
 .mobile-menu {
-  display: none;
+  display: none; /* Initially hidden */
   list-style: none;
+  padding: 0;
+  margin: 0;
   text-align: center;
-  background: #f9f9f9;
+  width: 100%; /* Full width of screen */
+  background-color: #f9f9f9; /* Light background for dropdown */
 }
 
 .mobile-menu li {
@@ -85,25 +95,24 @@ header .container {
 }
 
 .mobile-menu a {
-  color: #333;
+  color: #333; /* Neutral text color */
   text-decoration: none;
   font-weight: bold;
+  display: block;
+  padding: 10px 20px;
 }
 
 .mobile-menu a:hover {
-  color: #4CAF50;
+  background-color: #ddd; /* Highlight background on hover */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .desktop-nav {
-    display: none;
+    display: none; /* Hide desktop menu on mobile */
   }
 
   .mobile-nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
   }
 }
