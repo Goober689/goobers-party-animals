@@ -40,3 +40,12 @@ function toggleMenu() {
   }
 }
 
+
+
+document.querySelectorAll('.book-now').forEach(button => {
+  button.addEventListener('click', () => {
+    // Replace '#booking-section' with your booking form ID
+    document.querySelector('#booking-section').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
