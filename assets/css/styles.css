@@ -290,7 +290,7 @@ header .container {
 }
 
 .packages-section h2 {
-  color: #4CAF50; /* Goobers green */
+  color: #4CAF50;
   margin-bottom: 20px;
 }
 
@@ -301,95 +301,95 @@ header .container {
 
 /* Packages Container */
 .packages-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
-  gap: 20px; /* Spacing between cards */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* Package Card */
 .package-card {
-  perspective: 1000px; /* Enables 3D flip effect */
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* Ensures square cards */
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease; /* Smooth flip animation */
-}
-
-.package-card:hover .card-inner {
-  transform: rotateY(180deg); /* Flips card on hover */
-}
-
-/* Card Front and Back */
-.card-front, .card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backface-visibility: hidden; /* Hides back side */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: #fff; /* White background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  border: 1px solid #ddd; /* Light border */
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-.card-front {
-  text-align: center;
-}
-
-.card-front h3 {
-  color: #4CAF50; /* Goobers green */
+.package-card h3 {
+  color: #4CAF50;
   margin-bottom: 10px;
-  font-size: 20px;
 }
 
-.card-front .price {
+.package-card .price {
   font-size: 24px;
   font-weight: bold;
-  color: #333; /* Neutral dark font color */
+  color: #333;
+  margin: 15px 0;
 }
 
-.card-front .popular {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-.card-back {
-  transform: rotateY(180deg); /* Flip back face */
-  text-align: center;
-}
-
-.card-back p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-
-.card-back .book-now {
+.package-card .book-now {
   background-color: #4CAF50;
   color: #fff;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
 }
 
-.card-back .book-now:hover {
-  background-color: #45a049; /* Slightly darker green */
+.package-card .book-now:hover {
+  background-color: #45a049;
+}
+
+/* Highlight Popular Package */
+.package-card.popular {
+  border: 2px solid #4CAF50;
+}
+
+.package-card .badge {
+  background-color: #4CAF50;
+  color: #fff;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Additional Info */
+.additional-info {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.additional-info h3 {
+  color: #4CAF50;
+}
+
+.additional-info ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.additional-info .note {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.additional-info a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.additional-info a:hover {
+  text-decoration: underline;
 }
 
 
