@@ -250,3 +250,93 @@ header .container {
 .additional-info a:hover {
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+/* Companions Section */
+.companions-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.companions-section h2 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.companions-section p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Companions Grid */
+.companions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Companion Card */
+.companion-card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Ensures cards are square */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.companion-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Card Front and Back */
+.card-front, .card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-front img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card-front h3, .card-back h3 {
+  margin: 10px 0;
+  color: #4CAF50;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-back p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+

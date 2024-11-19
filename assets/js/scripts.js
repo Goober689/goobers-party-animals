@@ -49,3 +49,14 @@ document.querySelectorAll('.book-now').forEach(button => {
   });
 });
 
+
+
+
+
+
+
+document.querySelectorAll('.companion-card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.querySelector('.card-inner').classList.toggle('flipped');
+  });
+});
