@@ -9,68 +9,70 @@
 <body>
 
   <!-- Header Section -->
-<header>
-  <div class="container"> <!-- Open container for both desktop and mobile -->
-    <div class="logo">
-      <img src="assets/images/banner.png" alt="Goobers Party Animals Logo" class="banner">
+  <header>
+    <div class="container">
+      <!-- Logo Section -->
+      <div class="logo">
+        <img src="assets/images/banner.png" alt="Goobers Party Animals Logo" class="banner">
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="companions.html">Companions</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <nav class="mobile-nav">
+        <button class="hamburger" onclick="toggleMenu()">☰ Menu</button>
+        <ul id="mobileMenu" class="mobile-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="companions.html">Companions</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="companions.html">Companions</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav">
-      <button class="hamburger" onclick="toggleMenu()">☰ Menu</button>
-      <ul id="mobileMenu" class="mobile-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="companions.html">Companions</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-  </div> <!-- Close container here -->
-</header>
+  </header>
 
   <!-- Main Content Section -->
   <main>
-  <div class="container">
-    <section id="intro">
-      <h2>Welcome to Goobers Party Animals</h2>
-      <p>Your one-stop reptile zoo-to-you experience for parties and events!</p>
-	  <button class="hover-effect">Book an Event</button>
-    </section>
-	<section id="intro">
-	  <h2>Welcome to Goobers Party Animals</h2>
-	  <p>Your one-stop reptile zoo-to-you experience for parties and events!</p>
-	  <p>Explore our amazing companions, book events, and shop unique reptile-themed products.</p>
-	</section>
-	<section id="highlights">
-	  <h3>Our Services</h3>
-	  <p>We bring the reptiles to you for a fun, educational experience!</p>
-	</section>
-
-    <!-- Additional content specific to each page goes here -->
-  </div>
+    <div class="container">
+      <section id="intro">
+        <h2>Welcome to Goobers Party Animals</h2>
+        <p>Your one-stop reptile zoo-to-you experience for parties and events!</p>
+        <button class="hover-effect">Book an Event</button>
+      </section>
+      <section id="intro">
+        <h2>Explore Goobers Party Animals</h2>
+        <p>We bring reptiles to you for fun, educational experiences!</p>
+        <p>Explore our amazing companions, book events, and shop unique reptile-themed products.</p>
+      </section>
+      <section id="highlights">
+        <h3>Our Services</h3>
+        <p>We specialize in creating unforgettable experiences for all events!</p>
+      </section>
+    </div>
   </main>
 
   <!-- Footer Section -->
   <footer>
-  <div class="container">
-    <p>&copy; 2024 Goobers Party Animals LLC. All rights reserved.</p>
-    <p>Contact us at <a href="mailto:contact@gooberspartyanimals.com">contact@gooberspartyanimals.com</a></p>
-  </div>
+    <div class="container">
+      <p>&copy; 2024 Goobers Party Animals LLC. All rights reserved.</p>
+      <p>Contact us at <a href="mailto:contact@gooberspartyanimals.com">contact@gooberspartyanimals.com</a></p>
+    </div>
   </footer>
 
   <script src="assets/js/scripts.js"></script>
