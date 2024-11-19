@@ -1,10 +1,4 @@
-.hover-effect {
-  transition: transform 0.2s ease;
-}
-.hover-effect:hover {
-  transform: scale(1.1);
-}
-
+// Smooth Scroll for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -14,6 +8,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Toggle Mobile Menu (with Expand/Collapse)
+document.querySelector('.menu-button').addEventListener('click', () => {
+  const menu = document.querySelector('.menu');
+  if (menu.style.maxHeight && menu.style.maxHeight !== "0px") {
+    menu.style.maxHeight = null; // Collapse menu
+  } else {
+    menu.style.maxHeight = menu.scrollHeight + 'px'; // Expand menu
+  }
+});
+
+// Carousel Navigation (Next and Previous Buttons)
 const images = [
   "assets/images/sample1.jpg",
   "assets/images/sample2.jpg",
@@ -31,6 +36,7 @@ document.getElementById("prev").addEventListener("click", () => {
   document.getElementById("carousel-image").src = images[currentIndex];
 });
 
+// Toggle Menu (Alternative Functionality)
 function toggleMenu() {
   const menu = document.getElementById("menu");
   const isExpanded = menu.style.maxHeight && menu.style.maxHeight !== "0px";
@@ -43,10 +49,7 @@ function toggleMenu() {
   }
 }
 
-
-
-
-
+// Smooth Scroll to Booking Section
 document.querySelectorAll('.book-now').forEach(button => {
   button.addEventListener('click', () => {
     // Replace '#booking-section' with your booking form ID
@@ -54,12 +57,7 @@ document.querySelectorAll('.book-now').forEach(button => {
   });
 });
 
-
-
-
-
-
-
+// Flip Companion Cards
 document.querySelectorAll('.companion-card').forEach(card => {
   card.addEventListener('click', () => {
     card.querySelector('.card-inner').classList.toggle('flipped');

@@ -18,6 +18,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   background-color: transparent; /* Matches the body background */
+  color: inherit; /* Inherit text color */
 }
 
 /* Header Styling */
@@ -87,6 +88,7 @@ header .container {
   padding: 10px;
   position: relative;
   color: #fff;
+  z-index: 1000; /* Ensures navigation stays on top */
 }
 
 .menu-button {
@@ -99,6 +101,8 @@ header .container {
   width: 100%; /* Full width for mobile */
   cursor: pointer;
   border-radius: 5px; /* Rounded corners for a polished look */
+  margin: 10px auto; /* Centers the button */
+  display: block; /* Ensures it stays a block element */
 }
 
 .menu-button:hover {
@@ -115,6 +119,7 @@ header .container {
   transition: max-height 0.5s ease; /* Smooth expand/contract animation */
   background-color: #f9f9f9; /* Light background */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 5px; /* Rounded edges */
 }
 
 .menu-item {
@@ -128,7 +133,7 @@ header .container {
 .menu-item a {
   text-decoration: none;
   color: #333;
-  padding: 10px;
+  padding: 10px 15px;
   display: block;
   font-size: 16px;
 }
@@ -137,6 +142,7 @@ header .container {
   background-color: #4CAF50;
   color: #fff;
   border-radius: 5px; /* Rounded hover effect */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
 /* Static Phone Number */
@@ -174,6 +180,7 @@ header .container {
 
   .menu-button {
     width: 100%; /* Full-width button */
+    margin-top: 10px; /* Spacing from other elements */
   }
 
   .static-phone {
@@ -181,6 +188,7 @@ header .container {
     font-size: 18px; /* Slightly larger font for better visibility */
   }
 }
+
 
 
 
