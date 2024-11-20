@@ -176,12 +176,12 @@ header .container {
 
 /* Mobile Navigation Styles */
 .navigation {
-  background-color: transparent; /* Match the page background */
-  padding: 10px 0;
+/*  background-color: transparent; /* Match the page background */
+/*  padding: 10px 0;
   position: relative;
   color: #fff;
   z-index: 1000; /* Ensures navigation stays on top */
-  text-align: center; /* Centers the menu button */
+/*  text-align: center; /* Centers the menu button */
 }
 
 .menu-button {
@@ -207,7 +207,7 @@ header .container {
   list-style: none;
   margin: 10px auto; /* Centers the menu */
   padding: 0;
-  max-height: 0; /* Initially collapsed */
+  max-height: 0px; /* Initially collapsed */
   transition: max-height 0.5s ease-out; /* Smooth expand/contract animation */
   background-color: #f9f9f9; /* Light background */
   width: 80%; /* Match the button's width */

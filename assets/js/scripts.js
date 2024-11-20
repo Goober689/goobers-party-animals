@@ -8,15 +8,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Toggle Mobile Menu (with Expand/Collapse)
-document.querySelector('.menu-button').addEventListener('click', () => {
-  const menu = document.querySelector('.menu');
-  if (menu.style.maxHeight && menu.style.maxHeight !== "0px") {
-    menu.style.maxHeight = null; // Collapse menu
+// Attach the event listener to the button
+document.querySelector('.menu-button').addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  const isExpanded = menu.style.maxHeight && menu.style.maxHeight !== "0px";
+
+  // Toggle menu visibility
+  if (isExpanded) {
+    menu.style.maxHeight = "0px"; // Collapse menu
   } else {
-    menu.style.maxHeight = menu.scrollHeight + 'px'; // Expand menu
+    menu.style.maxHeight = menu.scrollHeight + "px"; // Expand menu smoothly
   }
-});
+}
+
 
 // Carousel Navigation (Next and Previous Buttons)
 const images = [
@@ -36,17 +42,7 @@ document.getElementById("prev").addEventListener("click", () => {
   document.getElementById("carousel-image").src = images[currentIndex];
 });
 
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  const isExpanded = menu.style.maxHeight && menu.style.maxHeight !== "0px";
 
-  // Toggle menu visibility
-  if (isExpanded) {
-    menu.style.maxHeight = "0"; // Collapse menu
-  } else {
-    menu.style.maxHeight = menu.scrollHeight + "px"; // Expand menu smoothly
-  }
-}
 
 
 
