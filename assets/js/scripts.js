@@ -37,16 +37,14 @@ document.getElementById("prev").addEventListener("click", () => {
 });
 
 function toggleMenu() {
-  const menu = document.getElementById("menu");
-  const isExpanded = menu.style.maxHeight && menu.style.maxHeight !== "0px";
-
-  // Toggle menu visibility
-  if (isExpanded) {
-    menu.style.maxHeight = "0"; // Collapse menu
+  const menu = document.getElementById('menu');
+  if (menu.style.maxHeight) {
+    menu.style.maxHeight = null; // Collapse the menu
   } else {
-    menu.style.maxHeight = menu.scrollHeight + "px"; // Expand menu smoothly
+    menu.style.maxHeight = menu.scrollHeight + 'px'; // Expand the menu
   }
 }
+
 
 
 // Smooth Scroll to Booking Section

@@ -111,15 +111,16 @@ header .container {
 
 /* Collapsible Menu */
 .menu {
-  overflow: hidden; /* Required for smooth animation */
+  overflow: hidden;
   list-style: none;
-  margin: 0;
+  margin: 10px auto; /* Centers the menu */
   padding: 0;
   max-height: 0; /* Initially collapsed */
   transition: max-height 0.5s ease; /* Smooth expand/contract animation */
   background-color: #f9f9f9; /* Light background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  border-radius: 5px; /* Rounded edges */
+  width: 80%; /* 80% of the screen width */
+  border-radius: 10px; /* Smooth corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
 }
 
 .menu-item {
@@ -133,16 +134,16 @@ header .container {
 .menu-item a {
   text-decoration: none;
   color: #333;
-  padding: 10px 15px;
+  padding: 10px;
   display: block;
   font-size: 16px;
+  text-align: center; /* Center text */
 }
 
 .menu-item a:hover {
   background-color: #4CAF50;
   color: #fff;
-  border-radius: 5px; /* Rounded hover effect */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  border-radius: 5px;
 }
 
 /* Static Phone Number */
@@ -495,14 +496,37 @@ header .container {
 
 /* Responsive Styling for Smaller Screens */
 @media (max-width: 768px) {
-  .companion-card {
-    width: 200px;
-    height: 280px;
+  .companions-grid {
+    display: flex; /* Use flexbox to center cards */
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+    gap: 20px; /* Add spacing between cards */
   }
+
+  .companion-card {
+    width: 90%; /* Cards take 90% of the screen width */
+    max-width: 300px; /* Limit max width to match desktop size */
+    margin: 0 auto; /* Center cards within the grid */
+  }
+
+  .card-inner {
+    width: 100%; /* Ensure the card uses the full width */
+    height: 0;
+    padding-top: 100%; /* Maintain square aspect ratio */
+  }
+
   .card-front, .card-back {
-    border-width: 4px; /* Thinner border for smaller screens */
+    border-width: 4px; /* Slightly thinner border for smaller screens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+
+  .card-front img, .card-back img {
+    width: 100%; /* Ensure image fills the card width */
+    height: 100%; /* Ensure image height matches card size */
+    object-fit: cover; /* Scale image to cover without distortion */
   }
 }
+
 
 
 
