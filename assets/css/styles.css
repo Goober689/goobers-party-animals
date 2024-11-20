@@ -459,37 +459,22 @@ header .container {
   right: 0;
   bottom: 0;
   backface-visibility: hidden; /* Hides back face when not flipped */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #fff;
-  border: 6px solid #4CAF50; /* Semi-thick border (3% of the card) in Goobers green */
+  border: 6px solid #4CAF50; /* Semi-thick border in Goobers green */
+  border-radius: 10px; /* Smooth corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds slight shadow for depth */
   overflow: hidden; /* Ensures content stays within the card boundaries */
 }
 
-.card-front img {
-  max-width: 100%; /* Keeps image responsive */
-  border-radius: 1px; /* Smooth corners for images */
-  margin-bottom: 0px; /* Spacing below the image */
+.card-front img, .card-back img {
+  width: 100%; /* Makes image fill the entire card */
+  height: 100%; /* Ensures the image height matches the card size */
+  object-fit: cover; /* Ensures the image doesn't stretch */
+  border-radius: 4px; /* Adds slight rounding to the image corners */
 }
 
-.card-front h3, .card-back h3 {
-  margin: 10px 0;
-  color: #4CAF50; /* Goobers green */
-}
-
+/* Back Card Styling */
 .card-back {
   transform: rotateY(180deg); /* Flips the back side */
-}
-
-.card-back img {
-  max-width: 100%; /* Keeps image responsive */
-  border-radius: 1px; /* Smooth corners for images */
-  margin-bottom: 0px; /* Spacing below the image */
 }
 
 /* Responsive Styling for Smaller Screens */
@@ -499,8 +484,7 @@ header .container {
     height: 280px;
   }
   .card-front, .card-back {
-    padding: 15px; /* Adjust padding for smaller screens */
-    font-size: 12px; /* Slightly smaller text size */
+    border-width: 4px; /* Slightly thinner border for smaller screens */
   }
 }
 
