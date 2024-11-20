@@ -80,26 +80,26 @@ header .container {
 #hero-banner {
   position: relative;
   width: 100%;
-  height: 400px; /* Set height for the banner */
+  height: auto; /* Set height for the banner */
   overflow: hidden;
 }
 
 .banner-slider {
   display: flex;
-/*  animation: slideAnimation 32s infinite; /* Smooth, slower transition */
+  animation: slideAnimation 32s infinite; /* Smooth, slower transition */
   width: 100%;
 }
 
 .slide {
-  flex: 0 0 100%; /* Each slide takes full width */
+  flex: 0 0 25%; /* Each slide takes full width */
   height: auto; /* Matches the height of the banner */
   position: relative;
 }
 
 .slide img {
   width: 100%;
-  height: 100%;
-/*  object-fit: cover; /* Ensures images fit without distortion */
+  height: auto;
+  object-fit: cover; /* Ensures images fit without distortion */
 }
 
 .banner-text {
@@ -140,11 +140,23 @@ header .container {
 
 /* Keyframes for Sliding Animation */
 @keyframes slideAnimation {
-  0%, 25% { transform: translateX(0); }        /* First slide */
-  30%, 55% { transform: translateX(-100%); }  /* Second slide */
-  60%, 85% { transform: translateX(-200%); }  /* Third slide */
-  90%, 100% { transform: translateX(-300%); } /* Fourth slide */
+  0%, 20% {
+    transform: translateX(0%); /* Show first slide */
+  }
+  25%, 45% {
+    transform: translateX(-25%); /* Show second slide */
+  }
+  50%, 70% {
+    transform: translateX(-50%); /* Show third slide */
+  }
+  75%, 95% {
+    transform: translateX(-75%); /* Show fourth slide */
+  }
+  100% {
+    transform: translateX(-100%); /* Loop back smoothly */
+  }
 }
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

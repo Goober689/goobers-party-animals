@@ -62,7 +62,7 @@ document.querySelectorAll('.companion-card').forEach(card => {
 });
 
 
-const bannerSlider = document.querySelector('.banner-slider');
+/*const bannerSlider = document.querySelector('.banner-slider');
 let currentSlide = 0;
 
 function showNextSlide() {
