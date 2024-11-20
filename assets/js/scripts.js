@@ -37,11 +37,14 @@ document.getElementById("prev").addEventListener("click", () => {
 });
 
 function toggleMenu() {
-  const menu = document.getElementById('menu');
-  if (menu.style.maxHeight) {
-    menu.style.maxHeight = null; // Collapse the menu
+  const menu = document.getElementById("menu");
+  const isExpanded = menu.style.maxHeight && menu.style.maxHeight !== "0px";
+
+  // Toggle menu visibility
+  if (isExpanded) {
+    menu.style.maxHeight = "0"; // Collapse menu
   } else {
-    menu.style.maxHeight = menu.scrollHeight + 'px'; // Expand the menu
+    menu.style.maxHeight = menu.scrollHeight + "px"; // Expand menu smoothly
   }
 }
 
