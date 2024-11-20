@@ -463,16 +463,20 @@ header .container {
   border-radius: 10px; /* Smooth corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds slight shadow for depth */
   overflow: hidden; /* Ensures content stays within the card boundaries */
+  padding: 0; /* Removes any padding */
+  margin: 0; /* Removes any margin */
 }
 
 .card-front img, .card-back img {
-  width: 100%; /* Makes image fill the entire card */
+  width: 100%; /* Ensures image fills the card */
   height: 100%; /* Ensures the image height matches the card size */
-  object-fit: cover; /* Ensures the image doesn't stretch */
-  border-radius: 4px; /* Adds slight rounding to the image corners */
+  object-fit: cover; /* Scales image without distortion */
+  margin: 0; /* Removes any margin */
+  padding: 0; /* Removes any padding */
+  border: none; /* Ensures the image does not have its own border */
+  border-radius: 4px; /* Aligns with the card's border rounding */
 }
 
-/* Back Card Styling */
 .card-back {
   transform: rotateY(180deg); /* Flips the back side */
 }
@@ -484,7 +488,7 @@ header .container {
     height: 280px;
   }
   .card-front, .card-back {
-    border-width: 4px; /* Slightly thinner border for smaller screens */
+    border-width: 4px; /* Thinner border for smaller screens */
   }
 }
 
