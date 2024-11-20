@@ -505,7 +505,7 @@ header .container {
 
   .companion-card {
     width: 90%; /* Cards take 90% of the screen width */
-    max-width: 300px; /* Limit max width to match desktop size */
+    max-width: 450px; /* Limit max width to match desktop size */
     margin: 0 auto; /* Center cards within the grid */
   }
 
