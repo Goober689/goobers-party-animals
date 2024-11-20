@@ -76,6 +76,64 @@ header .container {
 
 
 
+/* Hero Section */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+}
+
+/* Features Section */
+#features {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+}
+
+.feature-card img {
+  max-width: 80px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
 
 
 
@@ -214,30 +272,34 @@ header .container {
 .dark-footer {
   background-color: #333; /* Dark gray background */
   color: #fff; /* White text */
-  padding: 40px 0;
+  padding: 50px 20px; /* Increased padding for more space */
 }
 
 .footer-container {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   justify-content: space-between; /* Space out columns */
-  gap: 20px; /* Add spacing between columns */
+  gap: 30px; /* Add spacing between columns */
   max-width: 1200px;
   margin: 0 auto; /* Center align */
 }
 
 .footer-column {
   flex: 1; /* Equal width for columns */
-  min-width: 200px; /* Prevent columns from shrinking too small */
+  min-width: 250px; /* Prevent columns from shrinking too small */
+  text-align: left; /* Ensure consistent text alignment */
 }
 
 .footer-column h3 {
   color: #4CAF50; /* Goobers green theme */
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 20px; /* Slightly larger heading size */
 }
 
-.footer-column p {
-  margin: 0 0 10px; /* Add spacing between paragraphs */
-  line-height: 1.6;
+.footer-column p, .footer-column a {
+  margin-bottom: 10px; /* Add spacing between paragraphs and links */
+  line-height: 1.8; /* Improve readability */
+  font-size: 16px; /* Slightly larger font size */
 }
 
 .footer-column a {
@@ -252,13 +314,18 @@ header .container {
 /* Social Icons */
 .social-icons {
   display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 15px; /* Increased spacing between icons */
+  margin-top: 15px; /* Add margin above the icons */
 }
 
 .social-icons a img {
-  width: 30px; /* Icon size */
-  height: 30px;
+  width: 40px; /* Larger icon size for better visibility */
+  height: 40px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2); /* Scale up on hover */
 }
 
 /* Footer Bottom */
@@ -266,8 +333,9 @@ header .container {
   background-color: #222; /* Slightly darker gray */
   color: #ccc;
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0; /* Add more padding */
   font-size: 14px;
+  border-top: 2px solid #4CAF50; /* Add a green border for separation */
 }
 
 .footer-bottom p {
@@ -288,12 +356,25 @@ header .container {
   .footer-container {
     flex-direction: column; /* Stack columns vertically */
     text-align: center; /* Center-align text */
+    gap: 20px; /* Adjust gap for smaller screens */
+  }
+
+  .footer-column {
+    min-width: 100%; /* Columns take full width */
+    margin-bottom: 20px; /* Add spacing between stacked columns */
   }
 
   .social-icons {
     justify-content: center; /* Center icons */
+    margin-top: 20px;
+  }
+
+  .social-icons a img {
+    width: 35px; /* Slightly smaller icons for mobile */
+    height: 35px;
   }
 }
+
 
 
 
