@@ -84,10 +84,9 @@ header .container {
   height: 400px; /* Adjust height based on your design preference */
 }
 
+/* Adjust animation duration to slow the scroll */
 .banner-slider {
-  display: flex;
-  animation: slideAnimation 20s infinite; /* Adjusted duration for four slides */
-  width: 400%; /* Four slides total, adjust width accordingly */
+  animation: slideAnimation 32s infinite; /* Slow down for 4 slides */
 }
 
 .slide {
@@ -137,16 +136,33 @@ header .container {
   background-color: #45a049;
 }
 
-/* Keyframes for Sliding Animation */
+/* Keyframes for sliding animation */
 @keyframes slideAnimation {
-  0%, 15% { transform: translateX(0); }        /* Show first slide */
-  20%, 35% { transform: translateX(-100%); }  /* Show second slide */
-  40%, 55% { transform: translateX(-200%); }  /* Show third slide */
-  60%, 75% { transform: translateX(-300%); }  /* Show fourth slide */
-  80%, 100% { transform: translateX(0); }     /* Back to first slide */
+  0%, 20% { transform: translateX(0); }         /* Show first slide */
+  25%, 45% { transform: translateX(-100%); }   /* Show second slide */
+  50%, 70% { transform: translateX(-200%); }   /* Show third slide */
+  75%, 95% { transform: translateX(-300%); }   /* Show fourth slide */
+  100% { transform: translateX(0); }           /* Back to first slide */
 }
 
+@media (max-width: 768px) {
+  #hero-banner {
+    height: 250px; /* Reduce height for smaller screens */
+  }
 
+  .banner-text h2 {
+    font-size: 24px; /* Smaller headline */
+  }
+
+  .banner-text p {
+    font-size: 14px; /* Smaller description */
+  }
+
+  .cta-button {
+    font-size: 14px; /* Adjust button size */
+    padding: 10px 20px; /* Smaller padding */
+  }
+}
 
 
 
