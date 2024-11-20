@@ -64,3 +64,16 @@ document.querySelectorAll('.companion-card').forEach(card => {
     card.querySelector('.card-inner').classList.toggle('flipped');
   });
 });
+
+
+const bannerSlider = document.querySelector('.banner-slider');
+let currentSlide = 0;
+
+function showNextSlide() {
+  const totalSlides = document.querySelectorAll('.slide').length;
+  currentSlide = (currentSlide + 1) % totalSlides;
+  bannerSlider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+// Change slides every 5 seconds
+setInterval(showNextSlide, 5000);
