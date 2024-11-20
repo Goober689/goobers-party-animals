@@ -85,10 +85,11 @@ header .container {
 /* Mobile Navigation Styles */
 .navigation {
   background-color: #333; /* Dark background */
-  padding: 10px;
+  padding: 10px 0;
   position: relative;
   color: #fff;
   z-index: 1000; /* Ensures navigation stays on top */
+  text-align: center; /* Centers the menu button */
 }
 
 .menu-button {
@@ -96,13 +97,12 @@ header .container {
   background-color: #4CAF50; /* Goobers green */
   color: #fff;
   border: none;
-  padding: 15px 20px;
+  padding: 15px;
   text-align: center;
-  width: 100%; /* Full width for mobile */
-  cursor: pointer;
+  width: 80%; /* 80% width of the screen */
+  margin: 0 auto; /* Centers the button horizontally */
   border-radius: 5px; /* Rounded corners for a polished look */
-  margin: 10px auto; /* Centers the button */
-  display: block; /* Ensures it stays a block element */
+  cursor: pointer;
 }
 
 .menu-button:hover {
@@ -116,7 +116,7 @@ header .container {
   margin: 10px auto; /* Centers the menu */
   padding: 0;
   max-height: 0; /* Initially collapsed */
-  transition: max-height 0.5s ease; /* Smooth expand/contract animation */
+  transition: max-height 0.5s ease-out; /* Smooth expand/contract animation */
   background-color: #f9f9f9; /* Light background */
   width: 80%; /* 80% of the screen width */
   border-radius: 10px; /* Smooth corners */
@@ -134,21 +134,21 @@ header .container {
 .menu-item a {
   text-decoration: none;
   color: #333;
-  padding: 10px;
+  padding: 15px; /* Added padding for better tap targets */
   display: block;
   font-size: 16px;
   text-align: center; /* Center text */
 }
 
 .menu-item a:hover {
-  background-color: #4CAF50;
+  background-color: #4CAF50; /* Highlight on hover */
   color: #fff;
-  border-radius: 5px;
+  border-radius: 5px; /* Rounded hover effect */
 }
 
 /* Static Phone Number */
 .static-phone {
-  margin-top: 10px;
+  margin-top: 15px; /* Added spacing */
   text-align: center;
   color: #4CAF50;
   font-weight: bold;
@@ -166,7 +166,7 @@ header .container {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .desktop-nav {
-    display: none; /* Hide desktop menu on mobile */
+    display: none; /* Hide desktop navigation on mobile */
   }
 
   .navigation {
@@ -174,7 +174,6 @@ header .container {
   }
 
   .menu {
-    display: flex; /* Make menu items visible */
     flex-direction: column;
     width: 100%;
   }
@@ -184,12 +183,12 @@ header .container {
   }
 
   .menu-button {
-    width: 100%; /* Full-width button */
-    margin-top: 10px; /* Spacing from other elements */
+    width: 80%; /* Match button width with the menu */
+    margin: 10px auto; /* Center button */
   }
 
   .static-phone {
-    margin-top: 20px;
+    margin-top: 20px; /* Add spacing below menu */
     font-size: 18px; /* Slightly larger font for better visibility */
   }
 }
@@ -200,6 +199,7 @@ header .container {
     display: none; /* Hide mobile navigation */
   }
 }
+
 
 
 
