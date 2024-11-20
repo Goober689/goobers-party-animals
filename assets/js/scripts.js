@@ -36,7 +36,6 @@ document.getElementById("prev").addEventListener("click", () => {
   document.getElementById("carousel-image").src = images[currentIndex];
 });
 
-// Toggle Menu (Alternative Functionality)
 function toggleMenu() {
   const menu = document.getElementById("menu");
   const isExpanded = menu.style.maxHeight && menu.style.maxHeight !== "0px";
@@ -48,6 +47,7 @@ function toggleMenu() {
     menu.style.maxHeight = menu.scrollHeight + "px"; // Expand menu smoothly
   }
 }
+
 
 // Smooth Scroll to Booking Section
 document.querySelectorAll('.book-now').forEach(button => {

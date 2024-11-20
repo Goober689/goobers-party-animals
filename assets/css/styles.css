@@ -109,7 +109,7 @@ header .container {
   background-color: #45a049; /* Slightly darker green on hover */
 }
 
-/* Menu */
+/* Collapsible Menu */
 .menu {
   overflow: hidden; /* Required for smooth animation */
   list-style: none;
@@ -168,8 +168,12 @@ header .container {
     display: none; /* Hide desktop menu on mobile */
   }
 
+  .navigation {
+    display: block; /* Show mobile navigation */
+  }
+
   .menu {
-    display: flex; /* Show menu on mobile */
+    display: flex; /* Make menu items visible */
     flex-direction: column;
     width: 100%;
   }
@@ -188,6 +192,14 @@ header .container {
     font-size: 18px; /* Slightly larger font for better visibility */
   }
 }
+
+/* Hide Mobile Navigation on Larger Screens */
+@media (min-width: 769px) {
+  .navigation {
+    display: none; /* Hide mobile navigation */
+  }
+}
+
 
 
 
