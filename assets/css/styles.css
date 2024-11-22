@@ -1226,6 +1226,11 @@ footer {
   position: relative;
 }
 
+.packages-desc p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
 .package-card h3 {
   color: #4CAF50;
   margin-bottom: 10px;
@@ -1275,7 +1280,7 @@ footer {
 }
 
 .additional-info h3 {
-  color: #4CAF50;
+  color: #FFD700;
 }
 
 .additional-info ul {
@@ -1291,7 +1296,7 @@ footer {
 }
 
 .additional-info a {
-  color: #4CAF50;
+  color: #FFD700;
   text-decoration: none;
 }
 
