@@ -519,9 +519,9 @@ header .container {
   background-color: #4CAF50; /* Goobers green */
   color: #fff;
   border: none;
-  padding: 15px;
+  padding: 5px;
   text-align: center;
-  width: 80%; /* 80% width of the screen */
+  width: 95%; /* 80% width of the screen */
   margin: 0 auto; /* Centers the button horizontally */
   border-radius: 5px; /* Rounded corners for a polished look */
   cursor: pointer;
