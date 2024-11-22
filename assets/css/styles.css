@@ -1205,7 +1205,7 @@ footer {
 }
 
 .packages-section p {
-  color: #fff;
+  color: #333;
   margin-bottom: 20px;
 }
 
@@ -1227,11 +1227,6 @@ footer {
   text-align: left;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
-}
-
-.packages-section .packages-desc p {
-  color: #333;
-  margin-bottom: 20px;
 }
 
 .package-card h3 {
