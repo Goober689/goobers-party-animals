@@ -22,7 +22,7 @@ body {
 }
 
 /* Header Styling */
-header {
+.header {
   background-color: #fff; /* White header for contrast */
   border-bottom: 2px solid #4CAF50; /* Green accent */
   padding: 10px 0;
