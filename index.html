@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Goobers Party Animals</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -66,42 +67,65 @@
   <!-- Main Content Section -->
   <main>
     <!-- Hero Section -->
-	<section id="hero-banner">
-      <div class="banner-slider">
-        <div class="slide">
-          <img src="assets/images/banner1.jpg" alt="Event with Python">
-          <div class="banner-text">
-            <h2>Experience the Magic of Reptiles</h2>
-            <p>Interactive reptile shows for all occasions!</p>
-            <a href="contact.html" class="cta-button">Book Your Event</a>
+    <section id="hero-banner">
+      <div class="swiper-container hero-slider">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/images/banner1.jpg');"
+          >
+            <div class="banner-text">
+              <h2>Experience the Magic of Reptiles</h2>
+              <p>Interactive reptile shows for all occasions!</p>
+              <a href="contact.html" class="cta-button">Book Your Event</a>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/images/banner2.jpg');"
+          >
+            <div class="banner-text">
+              <h2>Educational and Fun</h2>
+              <p>Perfect for schools, parties, and more!</p>
+              <a href="contact.html" class="cta-button">Learn More</a>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/images/banner3.jpg');"
+          >
+            <div class="banner-text">
+              <h2>Book Your Unforgettable Experience</h2>
+              <p>Reptile encounters tailored to your event.</p>
+              <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/images/banner4.jpg');"
+          >
+            <div class="banner-text">
+              <h2>Unforgettable Moments Await!</h2>
+              <p>
+                Get up close with amazing reptiles and create memories that last a
+                lifetime.
+              </p>
+              <a href="companions.html" class="cta-button">See Our Companions</a>
+            </div>
           </div>
         </div>
-        <div class="slide">
-          <img src="assets/images/banner2.jpg" alt="School Event with Reptiles">
-          <div class="banner-text">
-            <h2>Educational and Fun</h2>
-            <p>Perfect for schools, parties, and more!</p>
-            <a href="contact.html" class="cta-button">Learn More</a>
-          </div>
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-prev">
+          <img src="" alt="Previous Slide Thumbnail" />
         </div>
-        <div class="slide">
-          <img src="assets/images/banner3.jpg" alt="Interactive Reptile Experience">
-          <div class="banner-text">
-            <h2>Book Your Unforgettable Experience</h2>
-            <p>Reptile encounters tailored to your event.</p>
-            <a href="contact.html" class="cta-button">Contact Us</a>
-          </div>
+        <div class="swiper-button-next">
+          <img src="" alt="Next Slide Thumbnail" />
         </div>
-		<div class="slide">
-		  <img src="assets/images/banner4.jpg" alt="Unforgettable Moments with Reptiles">
-		  <div class="banner-text">
-			<h2>Unforgettable Moments Await!</h2>
-			<p>Get up close with amazing reptiles and create memories that last a lifetime.</p>
-			<a href="companions.html" class="cta-button">See Our Companions</a>
-		  </div>
-		</div>
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
       </div>
     </section>
+
 
     <!-- Key Features Section -->
     <section id="features">
@@ -166,7 +190,7 @@
   </footer>
 
 
-
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="assets/js/scripts.js"></script>
 </body>
 </html>
