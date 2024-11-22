@@ -1191,18 +1191,18 @@ footer {
 
 /* Packages Section */
 .packages-section {
-  background-color: #f9f9f9;
+  background-color: #228B22;
   padding: 50px 20px;
   text-align: center;
 }
 
 .packages-section h2 {
-  color: #4CAF50;
+  color: #FFD700;
   margin-bottom: 20px;
 }
 
 .packages-section p {
-  color: #333;
+  color: #fff;
   margin-bottom: 20px;
 }
 
