@@ -76,6 +76,13 @@ header .container {
 
 
 
+
+
+
+
+
+
+
 /* Hero Section (Scrolling Banner) */
 #hero-banner {
   position: relative;
@@ -112,32 +119,36 @@ header .container {
   object-fit: cover;
 }
 
-/* Navigation Buttons with Thumbnails */
+/* Navigation Buttons (Arrows Only) */
 .swiper-button-prev,
 .swiper-button-next {
   color: #fff;
-  width: 80px;
-  height: 80px;
+  width: 50px;  /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
   top: 50%;
   transform: translateY(-50%);
   background: none;
+  background-size: 50%; /* Ensure arrow icons are appropriately sized */
+  background-repeat: no-repeat;
 }
 
 .swiper-button-prev {
   left: 10px;
+  /* Remove any background image */
+  background-image: none;
 }
 
 .swiper-button-next {
   right: 10px;
+  /* Remove any background image */
+  background-image: none;
 }
 
-/*.swiper-button-prev img,
+/* Remove images inside navigation buttons */
+.swiper-button-prev img,
 .swiper-button-next img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-} */
+  display: none;
+}
 
 /* Adjust Swiper Pagination */
 .swiper-pagination {
@@ -147,16 +158,15 @@ header .container {
 .swiper-pagination-bullet {
   background-color: gray;
   opacity: 1;
-  border-radius: 5px;
-  width: 100px;
-  height: 50px;
+  border-radius: 10px; /* Adjusted for new height */
+  width: 80px;  /* 20px (original width) * 4 */
+  height: 40px; /* 20px (original height) * 2 */
   margin: 0 5px;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #4CAF50;
 }
-
 
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
@@ -210,7 +220,6 @@ header .container {
     padding: 18px 36px;
   }
 }
-
 
 
 
