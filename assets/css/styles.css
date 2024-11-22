@@ -507,7 +507,7 @@ header .container {
 /* Mobile Navigation Styles */
 .navigation {
   background-color: transparent; /* Match the page background */
-  padding: 10px 0;
+  padding: 0px 0;
   position: relative;
   color: #fff;
   z-index: 1000; /* Ensures navigation stays on top */
