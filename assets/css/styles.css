@@ -232,17 +232,17 @@ header .container {
 }
 
 /* Limit website width and center content */
-body {
+/*body {
   max-width: 1920px;
   margin: 0 auto;
   background-color: #228B22; /* Goobers green */
-  background-image: url('assets/images/jungle-background-8k.jpg'); /* Large background image */
-  background-size: cover;
+  /*background-image: url('assets/images/jungle-background-8k.jpg'); /* Large background image */
+  /*background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
   line-height: 1.6;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden; *//* Prevent horizontal scroll */
 
 /* Container for Centered Content */
 .container {
@@ -465,6 +465,9 @@ header .container {
   .cta-button {
     font-size: 16px;
     padding: 12px 24px;
+  }
+  .swiper-pagination-bullet {
+  display: none;
   }
 }
 
