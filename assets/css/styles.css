@@ -583,7 +583,7 @@ header .container {
 
 .static-phone a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 35px;
 }
 
 .static-phone a:hover {
@@ -722,27 +722,37 @@ footer {
   text-decoration: underline;
 }
 
-/* Responsive Styles */
+/* Mobile Footer Adjustments */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column; /* Stack columns vertically */
-    text-align: center; /* Center-align text */
-    gap: 20px; /* Adjust gap for smaller screens */
+  footer {
+    padding: 10px 0; /* Reduce vertical padding */
   }
 
-  .footer-column {
-    min-width: 100%; /* Columns take full width */
-    margin-bottom: 20px; /* Add spacing between stacked columns */
+  .footer-container {
+    flex-direction: column; /* Stack columns */
+    align-items: center; /* Center-align content */
+    gap: 15px; /* Reduce spacing between sections */
+  }
+
+  .footer-section {
+    text-align: center; /* Center all text */
+    border-bottom: 1px solid #FFD700; /* Add a dividing line */
+    padding-bottom: 10px; /* Add some padding below the dividing line */
+    margin-bottom: 10px; /* Space out sections */
+  }
+
+  .footer-section:last-child {
+    border-bottom: none; /* Remove line from the last section */
+    margin-bottom: 0; /* No extra space after the last section */
   }
 
   .social-icons {
-    justify-content: center; /* Center icons */
-    margin-top: 20px;
+    margin: 10px 0; /* Adjust spacing for icons */
   }
 
-  .social-icons a img {
-    width: 35px; /* Slightly smaller icons for mobile */
-    height: 35px;
+  .footer-bottom {
+    padding: 10px 0; /* Reduce padding for the bottom text */
+    font-size: 12px; /* Slightly smaller font size */
   }
 }
 
