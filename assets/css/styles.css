@@ -1226,7 +1226,7 @@ footer {
   position: relative;
 }
 
-.package-card .packages-desc p {
+.packages-section .packages-desc p {
   color: #333;
   margin-bottom: 20px;
 }
