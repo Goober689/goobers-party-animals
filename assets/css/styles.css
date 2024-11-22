@@ -506,6 +506,9 @@ header .container {
 
 /* Mobile Navigation Styles */
 .navigation {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
   background-color: transparent; /* Match the page background */
   padding: 0px 0;
   position: relative;
@@ -522,11 +525,11 @@ header .container {
   padding: 15px;
   text-align: center;
   width: 100%; /* 80% width of the screen */
-  minimum-width: 150px; /* Optional: set a maximum width */
-  max-width: 400px; /* Optional: set a maximum width */
+  max-width: 500px; /* Optional: set a maximum width */
   margin: 0 auto; /* Centers the button horizontally */
   border-radius: 5px; /* Rounded corners for a polished look */
   cursor: pointer;
+  box-sizing: border-box; /* Ensure padding doesnt't add extra width */
 }
 
 .menu-button:hover {
