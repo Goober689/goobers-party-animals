@@ -733,14 +733,15 @@ footer {
     align-items: center; /* Center-align content */
     gap: 15px; /* Reduce spacing between sections */
   }
-
+  
   .footer-section {
     flex: 1 1 0px;
     max-width: 300px;
+	border-bottom: 1px solid #FFD700; /* Add a dividing line */
     text-align: center;
     margin-bottom: 20px;
   }
-
+  
   .footer-section:last-child {
     border-bottom: none; /* Remove line from the last section */
     margin-bottom: 0; /* No extra space after the last section */
