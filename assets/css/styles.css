@@ -1524,3 +1524,81 @@ footer {
   margin: 0 auto;                   /* Centers container */
   padding: 0 20px;                  /* Adds side padding */
 }
+
+
+
+
+
+
+
+/* CONTACT SECTION */
+
+.contact-container {
+  background-color: #fff; /* White background */
+  color: #333; /* Dark text */
+  padding: 20px; /* Space around the content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 600px; /* Limit width */
+  margin: 20px auto; /* Center align and add spacing */
+  text-align: center;
+}
+
+.contact-container h2 {
+  color: #228B22; /* Match green theme */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block; /* Make labels appear above inputs */
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%; /* Full width for inputs */
+  padding: 10px; /* Add padding for readability */
+  border: 1px solid #ccc; /* Border around inputs */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Adjust font size */
+}
+
+.form-group textarea {
+  height: 100px; /* Set height for textarea */
+  resize: none; /* Prevent resizing */
+}
+
+button[type="submit"] {
+  background-color: #228B22; /* Green button */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e7a1e; /* Darker green on hover */
+}
+
+.contact-info {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: #228B22;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
