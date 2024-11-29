@@ -95,3 +95,15 @@ document.querySelectorAll('.companion-card').forEach(card => {
     card.querySelector('.card-inner').classList.toggle('flipped');
   });
 });
+
+
+
+
+
+
+
+// DONATIONS
+const message = document.querySelector('.donations-message');
+setInterval(() => {
+  message.classList.toggle('highlight');
+}, 3000);

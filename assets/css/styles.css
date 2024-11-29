@@ -1328,115 +1328,6 @@ footer {
 
 
 
-/* Companions Section */
-.companions-section {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.companions-section h2 {
-  color: #4CAF50; /* Goobers green */
-  margin-bottom: 20px;
-}
-
-.companions-section p {
-  margin-bottom: 30px;
-  color: #555;
-}
-
-/* Companions Grid */
-.companions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusts layout responsively */
-  gap: 20px; /* Adds spacing between cards */
-}
-
-/* Companion Card */
-.companion-card {
-  perspective: 1000px; /* Enables 3D flip effect */
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* Ensures cards are square */
-  transform-style: preserve-3d; /* Maintains 3D context */
-  transition: transform 0.6s; /* Smooth flip animation */
-}
-
-.companion-card:hover .card-inner {
-  transform: rotateY(180deg); /* Flips card on hover */
-}
-
-/* Card Front and Back */
-.card-front, .card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backface-visibility: hidden; /* Hides back face when not flipped */
-  border: 6px solid #4CAF50; /* Semi-thick border in Goobers green */
-  border-radius: 10px; /* Smooth corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds slight shadow for depth */
-  overflow: hidden; /* Ensures content stays within the card boundaries */
-  padding: 0; /* Removes any padding */
-  margin: 0; /* Removes any margin */
-}
-
-.card-front img, .card-back img {
-  width: 100%; /* Ensures image fills the card */
-  height: 100%; /* Ensures the image height matches the card size */
-  object-fit: cover; /* Scales image without distortion */
-  margin: 0; /* Removes any margin */
-  padding: 0; /* Removes any padding */
-  border: none; /* Ensures the image does not have its own border */
-  border-radius: 4px; /* Aligns with the card's border rounding */
-}
-
-.card-back {
-  transform: rotateY(180deg); /* Flips the back side */
-}
-
-/* Responsive Styling for Smaller Screens */
-@media (max-width: 768px) {
-  .companions-grid {
-    display: flex; /* Use flexbox to center cards */
-    flex-direction: column; /* Stack cards vertically */
-    align-items: center; /* Center cards horizontally */
-    gap: 20px; /* Add spacing between cards */
-  }
-
-  .companion-card {
-    width: 90%; /* Cards take 90% of the screen width */
-    max-width: 450px; /* Limit max width to match desktop size */
-    margin: 0 auto; /* Center cards within the grid */
-  }
-
-  .card-inner {
-    width: 100%; /* Ensure the card uses the full width */
-    height: 0;
-    padding-top: 100%; /* Maintain square aspect ratio */
-  }
-
-  .card-front, .card-back {
-    border-width: 4px; /* Slightly thinner border for smaller screens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  }
-
-  .card-front img, .card-back img {
-    width: 100%; /* Ensure image fills the card width */
-    height: 100%; /* Ensure image height matches card size */
-    object-fit: cover; /* Scale image to cover without distortion */
-  }
-}
-
-
-
-
-
-
 
 
 
@@ -1485,6 +1376,12 @@ footer {
 
 
 
+
+
+
+
+
+
 /* About Section */
 .about-section {
   padding: 50px 20px;               /* Adds spacing */
@@ -1524,6 +1421,16 @@ footer {
   margin: 0 auto;                   /* Centers container */
   padding: 0 20px;                  /* Adds side padding */
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1601,4 +1508,116 @@ button[type="submit"]:hover {
 
 .contact-info a:hover {
   text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Donations Container */
+.donations-container {
+  background-color: #fff; /* White background for contrast */
+  color: #333; /* Dark text for readability */
+  padding: 20px; /* Add padding inside the section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 800px; /* Limit the width */
+  margin: 20px auto; /* Center on the page */
+  text-align: center; /* Center-align text */
+}
+
+/* Section Title */
+.donations-container h2 {
+  color: #228B22; /* Green color matching theme */
+  margin-bottom: 15px;
+}
+
+/* Donations Message */
+.donations-message {
+  font-size: 18px;
+  line-height: 1.6; /* Improves readability */
+  color: #444; /* Slightly softer dark color */
+  margin-bottom: 20px;
+}
+
+/* QR Codes Container */
+.qr-codes-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensure responsiveness */
+  justify-content: center; /* Center align the QR codes */
+  gap: 20px; /* Add space between QR code blocks */
+}
+
+/* QR Code Blocks */
+.qr-code {
+  background-color: #f9f9f9; /* Light gray background */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Add padding inside the block */
+  text-align: center; /* Center-align text */
+  width: 250px; /* Set a fixed width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.qr-code h3 {
+  color: #228B22; /* Green heading */
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.qr-code img {
+  max-width: 100%; /* Make the QR code responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+.qr-code p {
+  font-size: 14px;
+  color: #666; /* Softer text color */
+}
+
+/* Responsive Adjustments */
+/* @media (max-width: 768px) {
+  .qr-codes-container {
+    flex-direction: column; /* Stack QR codes vertically */
+    gap: 15px; /* Add spacing between stacked items */
+  } 
+  
+
+  .qr-code {
+    width: 100%; /* Make blocks full width on smaller screens */
+    max-width: 300px; /* Add max width for better presentation */
+    margin: 0 auto; /* Center-align individual blocks */
+  }
+} */
+
+/* Hide QR codes and show buttons on mobile */
+@media (max-width: 768px) {
+  .qr-codes-container img {
+    display: none; /* Hide QR code images on mobile */
+  }
+
+  .donate-link {
+    display: inline-block; /* Show clickable text links */
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #228B22; /* Match theme */
+    text-decoration: none;
+    background-color: #FFD700; /* Highlight with yellow */
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  .donate-link:hover {
+    background-color: #FFC107; /* Slightly darker yellow */
+  }
 }
