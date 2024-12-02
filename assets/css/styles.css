@@ -78,15 +78,15 @@ header .container {
 
 .swiper-pagination-bullet {
   background-color: gray;
-  opacity: 1;
+  opacity: 1 !important;
   border-radius: 10px;
-  width: 80px;
-  height: 40px;
+  width: 80px !important;
+  height: 40px !important;
   margin: 0 5px;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #4CAF50;
+  background-color: #4CAF50 !important;
 }
 
 /* Mobile-Specific Adjustments */
@@ -160,6 +160,12 @@ header .container {
   text-align: left;
 }
 
+/* Remove Arrows Globally */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important; /* Fully remove arrows */
+}
+
 @media (max-width: 768px) {
   .hero-slider .swiper-slide {
     height: 60vh;
@@ -169,8 +175,9 @@ header .container {
 
   /* Hide navigation buttons on mobile */
   .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
+  .swiper-button-next,
+  .swiper-pagination-bullet  {
+    display: none !important;
   }
 
   .banner-text {
@@ -180,9 +187,6 @@ header .container {
     padding: 15px; /* Slightly smaller padding */
   }
   
-  .swiper-pagination-bullet {
-  display: none;
-  }
 }
 
 @media (max-width: 480px) {
