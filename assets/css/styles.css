@@ -71,6 +71,24 @@ header .container {
   background-color: #FFC107;
 }
 
+/* Swiper Pagination */
+.swiper-pagination {
+  bottom: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: gray;
+  opacity: 1;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+  margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #4CAF50;
+}
+
 /* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
   header .container {
@@ -86,6 +104,33 @@ header .container {
     display: none;
   }
 }
+
+
+
+
+/* CTA Button Styling */
+.cta-button {
+  display: inline-block;
+  background-color: #4CAF50; /* Green background */
+  color: #fff; /* White text */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  padding: 10px 20px; /* Spacing inside the button */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove blue link underline */
+  text-align: center; /* Center-align text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.cta-button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  text-decoration: none; /* Ensure no underline appears */
+}
+
+
+
+
 
 /* Hero Section (Scrolling Banner) */
 #hero-banner {
@@ -134,7 +179,8 @@ header .container {
     max-width: 225px; /* 25% smaller width */
     padding: 15px; /* Slightly smaller padding */
   }
-    .swiper-pagination-bullet {
+  
+  .swiper-pagination-bullet {
   display: none;
   }
 }
@@ -151,6 +197,16 @@ header .container {
   .cta-button {
     font-size: 12px;
     padding: 8px 16px;
+  }
+  
+    /* Hide navigation buttons on mobile */
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  
+   .swiper-pagination-bullet {
+  display: none;
   }
 }
 
@@ -169,23 +225,7 @@ header .container {
   }
 }
 
-/* Swiper Pagination */
-.swiper-pagination {
-  bottom: 20px;
-}
 
-.swiper-pagination-bullet {
-  background-color: gray;
-  opacity: 1;
-  border-radius: 10px;
-  width: 80px;
-  height: 40px;
-  margin: 0 5px;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #4CAF50;
-}
 
 
 
