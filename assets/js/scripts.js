@@ -98,6 +98,7 @@ document.querySelectorAll('.companion-card').forEach(card => {
 
 
 
+
 const imageFiles = [
     'images/image1.jpg',
     'images/image2.jpg',
@@ -134,3 +135,14 @@ window.addEventListener('scroll', () => {
 
 // Initial load
 loadMoreImages();
+
+
+
+
+
+// DONATIONS
+const message = document.querySelector('.donations-message');
+setInterval(() => {
+  message.classList.toggle('highlight');
+}, 3000);
+
