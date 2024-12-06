@@ -1524,3 +1524,24 @@ footer {
   margin: 0 auto;                   /* Centers container */
   padding: 0 20px;                  /* Adds side padding */
 }
+
+
+
+
+
+
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px; /* Spacing between images */
+    padding: 20px;
+}
+
+.image-grid img {
+    width: 100%; /* Make images fill the grid cell */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Image shadow */
+}

@@ -95,3 +95,42 @@ document.querySelectorAll('.companion-card').forEach(card => {
     card.querySelector('.card-inner').classList.toggle('flipped');
   });
 });
+
+
+
+const imageFiles = [
+    'images/image1.jpg',
+    'images/image2.jpg',
+    'images/image3.jpg',
+    // Add more image paths as needed
+];
+
+// Dynamically add images to the grid
+const imageGrid = document.getElementById('imageGrid');
+
+imageFiles.forEach((src) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = 'Image'; // Add alt text for accessibility
+    imageGrid.appendChild(img);
+});
+
+function loadMoreImages() {
+    imageFiles.forEach((src) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = 'Image'; // Add alt text for accessibility
+        imageGrid.appendChild(img);
+    });
+}
+
+// Infinite scroll listener
+window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        // Load more images when user reaches bottom
+        loadMoreImages();
+    }
+});
+
+// Initial load
+loadMoreImages();
