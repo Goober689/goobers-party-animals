@@ -97,45 +97,43 @@ document.querySelectorAll('.companion-card').forEach(card => {
 });
 
 
+// Example: If your images are named image1.jpg, image2.jpg, ... image322.jpg
+// This generates an array of all those image paths.
+const imageUrls = [];
+for (let i = 1; i <= 322; i++) {
+    imageUrls.push(`assets/images/gallery/image${i}.jpg`);
+}
 
-
-const imageFiles = [
-    'images/image1.jpg',
-    'images/image2.jpg',
-    'images/image3.jpg',
-    // Add more image paths as needed
-];
-
-// Dynamically add images to the grid
 const imageGrid = document.getElementById('imageGrid');
-
-imageFiles.forEach((src) => {
-    const img = document.createElement('img');
-    img.src = src;
-    img.alt = 'Image'; // Add alt text for accessibility
-    imageGrid.appendChild(img);
-});
+let currentIndex = 0;
+const batchSize = 20; // Number of images to load at a time
 
 function loadMoreImages() {
-    imageFiles.forEach((src) => {
+    const endIndex = currentIndex + batchSize;
+    const batch = imageUrls.slice(currentIndex, endIndex);
+
+    batch.forEach((src) => {
         const img = document.createElement('img');
         img.src = src;
         img.alt = 'Image'; // Add alt text for accessibility
         imageGrid.appendChild(img);
     });
+
+    currentIndex = endIndex;
 }
 
 // Infinite scroll listener
 window.addEventListener('scroll', () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        // Load more images when user reaches bottom
-        loadMoreImages();
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+        // Load more images when user reaches the bottom, if available
+        if (currentIndex < imageUrls.length) {
+            loadMoreImages();
+        }
     }
 });
 
 // Initial load
 loadMoreImages();
-
 
 
 

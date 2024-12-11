@@ -262,6 +262,7 @@ body {
   color: #fff;
   line-height: 1.6;
   overflow-x: hidden; /* Prevent horizontal scroll */
+}
 
 /* Container for Centered Content */
 .container {
@@ -1272,30 +1273,6 @@ footer {
 
 
 
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 10px; /* Spacing between images */
-    padding: 20px;
-}
-
-.image-grid img {
-    width: 100%; /* Make images fill the grid cell */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Image shadow */
-}
-
-
-
-
-
-
-
-
-
-
 /* CONTACT SECTION */
 
 .contact-container {
@@ -1481,9 +1458,6 @@ button[type="submit"]:hover {
 }
 
 
-
-
-}
 
 .image-grid {
     display: grid;
